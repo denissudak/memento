@@ -32,14 +32,14 @@ Here's an example of the `Message` which state can be "saved":
     
         @Override
         public void restore(MessageSnapshot state) {
-            stringBuilder = new StringBuilder(state.letterContents);
+            stringBuilder = new StringBuilder(state.msgContents);
         }
     
         public static class MessageSnapshot implements Memento{
-            private final String letterContents;
+            private final String msgContents;
     
-            public MessageSnapshot(String letterContents) {
-                this.letterContents = letterContents;
+            public MessageSnapshot(String msgContents) {
+                this.msgContents = msgContents;
             }
         }
     }
