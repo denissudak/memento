@@ -38,7 +38,7 @@ Here's an example of the `Message` which state can be "saved":
         public static class MessageSnapshot implements Memento{
             private final String msgContents;
     
-            public MessageSnapshot(String msgContents) {
+            private MessageSnapshot(String msgContents) {
                 this.msgContents = msgContents;
             }
         }
